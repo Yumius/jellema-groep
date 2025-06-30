@@ -1,4 +1,33 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "proxima-nova", sans-serif;
+  
+  --color-tory-blue-50: #edf9ff;
+  --color-tory-blue-100: #d7efff;
+  --color-tory-blue-200: #b9e5ff;
+  --color-tory-blue-300: #88d7ff;
+  --color-tory-blue-400: #50bfff;
+  --color-tory-blue-500: #289fff;
+  --color-tory-blue-600: #1180ff;
+  --color-tory-blue-700: #0a68eb;
+  --color-tory-blue-800: #0f52ba;
+  --color-tory-blue-900: #134995;
+  --color-tory-blue-950: #112d5a;
+
+  --color-blue-50: var(--color-tory-blue-50);
+  --color-blue-100: var(--color-tory-blue-100);
+  --color-blue-200: var(--color-tory-blue-200);
+  --color-blue-300: var(--color-tory-blue-300);
+  --color-blue-400: var(--color-tory-blue-400);
+  --color-blue-500: var(--color-tory-blue-500);
+  --color-blue-600: var(--color-tory-blue-600);
+  --color-blue-700: var(--color-tory-blue-700);
+  --color-blue-800: var(--color-tory-blue-800);
+  --color-blue-900: var(--color-tory-blue-900);
+  --color-blue-950: var(--color-tory-blue-950);
+}
+
 .loading-container {
   z-index: 500;
   pointer-events: none;
@@ -10,7 +39,7 @@
 .loading-screen {
   pointer-events: auto;
   color: #fff;
-  background-color: #000;
+  background-color: var(--color-blue-950);
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -27,13 +56,6 @@
   align-items: center;
   display: flex;
   opacity: 0;
-}
-
-.loading-words__dot {
-  background-color: #fff;
-  border-radius: 50%;
-  width: .75em;
-  height: .75em;
 }
 
 .loading-words__word {
