@@ -1,4 +1,9 @@
+import Swiper from 'swiper';
+import { Pagination } from 'swiper/modules';
+
 import './style.css'
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 function initWelcomingWordsLoader() {
   const loadingContainer = document.querySelector('[data-loading-container]');
@@ -77,9 +82,23 @@ function initAppleDockNavigationBar() {
   });
 }
 
+function initSwiper() {
+  const swiper = new Swiper('.swiper', {
+    modules: [Pagination],
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
+        centeredSlides: true,
+      },
+    }
+  });
+}
+
 // Initialize Welcoming Words Loader
 document.addEventListener('DOMContentLoaded', () => {
   initWelcomingWordsLoader();
   initAppleDockNavigationBar();
-
+  initSwiper();
 });

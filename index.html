@@ -8,10 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/gpy6hhl.css" />
-    <script src="https://kit.fontawesome.com/d9efd11885.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/d9efd11885.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body class="bg-white font-sans relative h-full">
-    <!-- <div data-loading-container="" class="loading-container">
+    <div data-loading-container="" class="loading-container">
       <div class="loading-screen">
         <div
           data-loading-words="Jellema Groep, Jellema Afbouw, Jellema Projecten, J.L. Investments, Jellema Groep"
@@ -22,13 +25,13 @@
           </p>
         </div>
       </div>
-    </div> -->
-    <div class="flex h-full w-full">
+    </div>
+    <div class="flex h-full w-full flex-col lg:flex-row">
       <div
-        class="h-full w-1/4 bg-white flex flex-col items-end justify-between p-10 md:p-20"
+        class="lg:h-full h-1/2 w-full lg:w-1/4 bg-white flex flex-col items-end justify-between p-10 2xl:p-20"
       >
         <svg
-          class="w-[200px]"
+          class="w-[140px] lg:w-[200px]"
           id="uuid-d61be27f-e2dc-4003-aa2c-84b290c03721"
           data-name="Laag 2"
           xmlns="http://www.w3.org/2000/svg"
@@ -323,32 +326,36 @@
         </svg>
 
         <div class="flex flex-col gap-2 text-right">
-          <h1 class="">
-            Jellema Groep B.V.
-          </h1>
+          <h1 class="">Jellema Groep B.V.</h1>
           <p class="text-sm text-gray-500">
             Jellema Projecten B.V.
-            <br>
+            <br />
             Anthonie Fokkerstraat 57W
-            <br>
+            <br />
             3772 MP Barneveld
-            <br>
+            <br />
             0342 - 45 09 15
-            <br>
+            <br />
             info@jellema-groep.nl
           </p>
           <div class="flex gap-4 justify-end mt-4">
-            <a href="#" class="text-sm aspect-square size-10 bg-blue-800 text-white flex items-center justify-center">
+            <a
+              href="#"
+              class="text-sm aspect-square size-10 bg-blue-800 text-white flex items-center justify-center"
+            >
               <i class="fa-brands fa-linkedin-in"></i>
             </a>
-            <a href="#" class="text-sm aspect-square size-10 bg-blue-800 text-white flex items-center justify-center">
+            <a
+              href="#"
+              class="text-sm aspect-square size-10 bg-blue-800 text-white flex items-center justify-center"
+            >
               <i class="fa-sharp fa-solid fa-envelope"></i>
-            </a>            
+            </a>
           </div>
         </div>
       </div>
       <div
-        class="h-full w-3/4 bg-gray-200 flex flex-col items-center justify-end relative overflow-hidden"
+        class="h-1/2 lg:h-full w-full lg:w-3/4 bg-gray-200 flex items-center justify-center lg:flex-col lg:justify-end relative overflow-hidden"
       >
         <div class="absolute inset-0 opacity-10">
           <img
@@ -358,57 +365,157 @@
           />
         </div>
 
-        <div class="flex gap-4 justify-center items-center p-10 relative z-10">
+        <!-- Slider main container -->
+        <div class="w-full h-full p-4 md:hidden">
+          <div class="swiper w-full h-full overflow-visible!">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+              
+              <div class="swiper-slide w-60">
+                <div
+                  class="bg-white hover:shadow-lg transition-all duration-300 hover:scale-102 flex flex-col"
+                >
+                  <div class="w-full aspect-square bg-gray-300">
+                    <img
+                      src="https://www.jellema-afbouw.nl/content/uploads/2024/05/foto.lindanijk-10.jpg"
+                      alt="Jellema Afbouw"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-4 flex flex-col gap-2">
+                    <h3 class="text-lg font-bold">Jellema Afbouw</h3>
+                    <p class="text-sm text-gray-500">
+                      Jellema Afbouw is de specialist voor het plaatsen van
+                      plafonds en wanden.
+                    </p>
+                    <a href="#" class="text-sm flex items-center gap-2">
+                      Bezoek website
+                      <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-60">
+                <div
+                  class="bg-white hover:shadow-lg transition-all duration-300 hover:scale-102 flex flex-col"
+                >
+                  <div class="w-full aspect-square bg-gray-300">
+                    <img
+                      src="https://www.jellema-afbouw.nl/content/uploads/2024/05/foto.lindanijk-10.jpg"
+                      alt="Jellema Afbouw"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-4 flex flex-col gap-2">
+                    <h3 class="text-lg font-bold">Jellema Afbouw</h3>
+                    <p class="text-sm text-gray-500">
+                      Jellema Afbouw is de specialist voor het plaatsen van
+                      plafonds en wanden.
+                    </p>
+                    <a href="#" class="text-sm flex items-center gap-2">
+                      Bezoek website
+                      <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide w-60">
+                <div
+                  class="bg-white hover:shadow-lg transition-all duration-300 hover:scale-102 flex flex-col"
+                >
+                  <div class="w-full aspect-square bg-gray-300">
+                    <img
+                      src="https://www.jellema-afbouw.nl/content/uploads/2024/05/foto.lindanijk-10.jpg"
+                      alt="Jellema Afbouw"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="p-4 flex flex-col gap-2">
+                    <h3 class="text-lg font-bold">Jellema Afbouw</h3>
+                    <p class="text-sm text-gray-500">
+                      Jellema Afbouw is de specialist voor het plaatsen van
+                      plafonds en wanden.
+                    </p>
+                    <a href="#" class="text-sm flex items-center gap-2">
+                      Bezoek website
+                      <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+  
+          </div>
+        </div>
+
+        <div class="hidden md:flex gap-4 relative z-10 lg:p-10">
           <div class="flex gap-4">
-            <div class="w-60 bg-white">
+            <div
+              class="w-60 bg-white hover:shadow-lg transition-all duration-300 hover:scale-102 flex flex-col"
+            >
               <div class="w-full aspect-square bg-gray-300">
-                <img src="https://www.jellema-afbouw.nl/content/uploads/2024/05/foto.lindanijk-10.jpg" alt="Jellema Afbouw" class="w-full h-full object-cover">
+                <img
+                  src="https://www.jellema-afbouw.nl/content/uploads/2024/05/foto.lindanijk-10.jpg"
+                  alt="Jellema Afbouw"
+                  class="w-full h-full object-cover"
+                />
               </div>
               <div class="p-4 flex flex-col gap-2">
-                <h3 class="text-lg font-bold">
-                  Jellema Afbouw
-                </h3>
+                <h3 class="text-lg font-bold">Jellema Afbouw</h3>
                 <p class="text-sm text-gray-500">
-                  Jellema Afbouw is de specialist voor het plaatsen van plafonds en wanden.
+                  Jellema Afbouw is de specialist voor het plaatsen van plafonds
+                  en wanden.
                 </p>
                 <a href="#" class="text-sm flex items-center gap-2">
-                  Bezoek website <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
+                  Bezoek website
+                  <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
                 </a>
               </div>
             </div>
-            <div class="w-60 bg-white flex flex-col">
+            <div
+              class="w-60 bg-white hover:shadow-lg transition-all duration-300 hover:scale-102 flex flex-col"
+            >
               <div class="w-full aspect-square bg-gray-300">
-                <img src="https://jellema-projecten.nl/app/uploads/2023/02/Copijn-Landschapsarchitecten-Jellema-Projecten_VW_5480.jpg" alt="Jellema Projecten" class="w-full h-full object-cover">
+                <img
+                  src="https://jellema-projecten.nl/app/uploads/2023/02/Copijn-Landschapsarchitecten-Jellema-Projecten_VW_5480.jpg"
+                  alt="Jellema Projecten"
+                  class="w-full h-full object-cover"
+                />
               </div>
               <div class="p-4 flex flex-col gap-2 justify-between h-full">
-                <h3 class="text-lg font-bold">
-                  Jellema Projecten
-                </h3>
+                <h3 class="text-lg font-bold">Jellema Projecten</h3>
                 <p class="text-sm text-gray-500">
                   Jellema Projecten is de specialist voor totaalafbouw.
                 </p>
                 <a href="#" class="text-sm flex items-center gap-2">
-                  Bezoek website <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
+                  Bezoek website
+                  <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
                 </a>
               </div>
             </div>
-            <div class="w-60 bg-white">
+            <div
+              class="w-60 bg-white hover:shadow-lg transition-all duration-300 hover:scale-102 flex flex-col"
+            >
               <div class="w-full aspect-square bg-gray-950"></div>
               <div class="p-4 flex flex-col gap-2 justify-between">
-                <h3 class="text-lg font-bold">
-                  J.L. Investments
-                </h3>
+                <h3 class="text-lg font-bold">J.L. Investments</h3>
                 <p class="text-sm text-gray-500">
-                  J.L. Investments is een onderneming die zich richt op het beleggen in onroerend goed.
+                  J.L. Investments is een onderneming die zich richt op het
+                  beleggen in onroerend goed.
                 </p>
                 <a href="#" class="text-sm flex items-center gap-2">
-                  Bezoek website <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
+                  Bezoek website
+                  <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
                 </a>
               </div>
             </div>
           </div>
         </div>
-      </div>
+            </div>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
