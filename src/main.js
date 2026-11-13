@@ -9,6 +9,17 @@ function initWelcomingWordsLoader() {
   const loadingContainer = document.querySelector('[data-loading-container]');
   if (!loadingContainer) return; // Stop animation when no [data-loading-words] is found
 
+  // Skip the intro when GSAP failed to load, the visitor prefers reduced motion,
+  // or the intro already played this session.
+  let seen = false;
+  try { seen = sessionStorage.getItem('jg-loader-seen') === '1'; } catch {}
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (typeof gsap === 'undefined' || reduceMotion || seen) {
+    loadingContainer.remove();
+    return;
+  }
+  try { sessionStorage.setItem('jg-loader-seen', '1'); } catch {}
+
   const loadingWords = loadingContainer.querySelector('[data-loading-words]');
   const wordsTarget = loadingWords.querySelector('[data-loading-words-target]');
   const words = loadingWords.getAttribute('data-loading-words').split(',').map(w => w.trim());
@@ -44,6 +55,8 @@ function initWelcomingWordsLoader() {
     duration: 0.6,
     ease: "Power1.easeInOut"
   }, "+ -0.2");
+
+  tl.call(() => loadingContainer.remove());
 }
 
 function initAppleDockNavigationBar() {
@@ -98,8 +111,20 @@ function initSwiper() {
 }
 
 // Initialize Welcoming Words Loader
+// Each init runs on its own, so a failure in one never blocks the others.
+const safely = (fn) => {
+  try {
+    fn();
+  } catch (error) {
+    console.error(error);
+    if (fn === initWelcomingWordsLoader) {
+      document.querySelector('[data-loading-container]')?.remove();
+    }
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
-  initWelcomingWordsLoader();
-  initAppleDockNavigationBar();
-  initSwiper();
+  safely(initWelcomingWordsLoader);
+  safely(initAppleDockNavigationBar);
+  safely(initSwiper);
 });

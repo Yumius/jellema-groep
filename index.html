@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="nl" class="h-full">
   <head>
     <!-- Google tag (gtag.js) -->
     <script
@@ -30,7 +30,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="bg-white font-sans relative h-full max-h-svh">
+  <body class="bg-white font-sans relative min-h-dvh lg:h-full lg:max-h-svh">
     <div data-loading-container="" class="loading-container">
       <div class="loading-screen">
         <div
@@ -43,9 +43,9 @@
         </div>
       </div>
     </div>
-    <div class="flex h-full w-full flex-col lg:flex-row">
+    <div class="flex min-h-dvh lg:min-h-0 lg:h-full w-full flex-col lg:flex-row">
       <div
-        class="lg:h-full h-1/3 w-full lg:w-1/4 bg-white flex lg:flex-col items-start gap-1 lg:items-end justify-between sm:justify-end lg:justify-between p-8 sm:gap-4 md:gap-8 sm:p-10 2xl:p-20 border-t-6 lg:border-t-0 lg:border-l-6 border-blue-800"
+        class="shrink-0 lg:h-full w-full lg:w-1/4 bg-white flex lg:flex-col items-start gap-1 lg:items-end justify-between sm:justify-end lg:justify-between p-8 sm:gap-4 md:gap-8 sm:p-10 2xl:p-20 border-t-6 lg:border-t-0 lg:border-l-6 border-blue-800"
       >
         <svg
           class="w-[140px] lg:w-[200px]"
@@ -349,29 +349,31 @@
             <br />
             3772 MP Barneveld
             <br />
-            0342 - 45 09 15
+            <a href="tel:+31342450915" class="whitespace-nowrap hover:underline">0342 - 45 09 15</a>
             <br />
-            info@jellema-groep.nl
+            <a href="mailto:info@jellema-groep.nl" class="hover:underline">info@jellema-groep.nl</a>
           </p>
           <div class="flex gap-4 justify-end mt-4">
             <a
               href="https://www.linkedin.com/company/jellema-projecten-bv/"
               rel="nofollow"
-              class="text-sm aspect-square size-10 bg-blue-800 text-white flex items-center justify-center"
+              aria-label="Jellema op LinkedIn"
+              class="text-sm aspect-square size-11 bg-blue-800 text-white flex items-center justify-center"
             >
-              <i class="fa-brands fa-linkedin-in"></i>
+              <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
             </a>
             <a
               href="mailto:info@jellema-groep.nl"
-              class="text-sm aspect-square size-10 bg-blue-800 text-white flex items-center justify-center"
+              aria-label="Mail info@jellema-groep.nl"
+              class="text-sm aspect-square size-11 bg-blue-800 text-white flex items-center justify-center"
             >
-              <i class="fa-sharp fa-solid fa-envelope"></i>
+              <i class="fa-sharp fa-solid fa-envelope" aria-hidden="true"></i>
             </a>
           </div>
         </div>
       </div>
       <div
-        class="h-2/3 lg:h-full w-full lg:w-3/4 bg-gray-200 flex items-center justify-center lg:flex-col lg:justify-end relative overflow-hidden"
+        class="flex-1 min-h-[420px] lg:h-full w-full lg:w-3/4 bg-gray-200 flex items-center justify-center lg:flex-col lg:justify-end relative overflow-hidden"
       >
         <div class="absolute inset-0 opacity-100">
           <img
@@ -387,130 +389,90 @@
           class="w-full h-full flex items-center justify-center p-4 md:hidden"
         >
           <div class="swiper w-full overflow-visible!">
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-              <div class="swiper-slide w-[230px]!">
-                <div
-                  class="bg-white hover:shadow-lg transition-all duration-300 hover:scale-102 flex flex-col"
+              <div class="swiper-slide">
+                <a
+                  href="https://www.jellema-projecten.nl"
+                  class="group bg-white flex flex-col transition-all duration-300 hover:shadow-lg hover:scale-102 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white h-full"
                 >
-                  <div
-                    class="w-full aspect-square bg-gray-50 flex items-center justify-center"
-                  >
-                    <img
-                      src="/jellema-projecten-logo.svg"
-                      alt="Jellema Projecten"
-                      class="object-cover w-32"
-                    />
+                  <div class="w-full aspect-square bg-gray-50 flex items-center justify-center">
+                    <img src="/jellema-projecten-logo.svg" alt="" class="object-cover w-32" />
                   </div>
-                  <div class="p-6 flex flex-col gap-2">
-                    <h3 class="text-lg font-bold">Jellema Projecten B.V.</h3>
-                    <p class="text-sm text-gray-500 h-[60px]">
-                      Jellema Projecten is de specialist voor totaalafbouw.
-                    </p>
-                    <a
-                      href="https://www.jellema-projecten.nl"
-                      class="text-sm flex items-center gap-2"
-                    >
+                  <div class="p-6 flex flex-col gap-2 justify-between grow">
+                    <div class="flex flex-col gap-2">
+                      <h2 class="text-lg font-bold">Jellema Projecten B.V.</h2>
+                      <p class="text-sm text-gray-500">Jellema Projecten is de specialist voor totaalafbouw.</p>
+                    </div>
+                    <span class="text-sm font-semibold text-blue-800 flex items-center gap-2 group-hover:underline">
                       Bezoek website
-                      <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
-                    </a>
+                      <i class="fa-sharp fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+                    </span>
                   </div>
-                </div>
+                </a>
               </div>
-              <div class="swiper-slide w-[230px]!">
-                <div
-                  class="bg-white hover:shadow-lg transition-all duration-300 hover:scale-102 flex flex-col aspect-[5/4]"
+              <div class="swiper-slide">
+                <a
+                  href="https://www.jellema-afbouw.nl"
+                  class="group bg-white flex flex-col transition-all duration-300 hover:shadow-lg hover:scale-102 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white h-full"
                 >
-                  <div
-                    class="w-full aspect-square bg-gray-50 flex items-center justify-center"
-                  >
-                    <img
-                      src="/jellema-afbouw-logo.svg"
-                      alt="Jellema Afbouw"
-                      class="object-cover w-32"
-                    />
+                  <div class="w-full aspect-square bg-gray-50 flex items-center justify-center">
+                    <img src="/jellema-afbouw-logo.svg" alt="" class="object-cover w-32" />
                   </div>
-                  <div class="p-6 flex flex-col gap-2">
-                    <h3 class="text-lg font-bold">Jellema Afbouw B.V.</h3>
-                    <p class="text-sm text-gray-500 h-[60px]">
-                      Jellema Afbouw is de specialist voor het plaatsen van
-                      plafonds en wanden.
-                    </p>
-                    <a
-                      href="https://www.jellema-afbouw.nl"
-                      class="text-sm flex items-center gap-2"
-                    >
+                  <div class="p-6 flex flex-col gap-2 justify-between grow">
+                    <div class="flex flex-col gap-2">
+                      <h2 class="text-lg font-bold">Jellema Afbouw B.V.</h2>
+                      <p class="text-sm text-gray-500">Jellema Afbouw is de specialist voor het plaatsen van plafonds en wanden.</p>
+                    </div>
+                    <span class="text-sm font-semibold text-blue-800 flex items-center gap-2 group-hover:underline">
                       Bezoek website
-                      <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
-                    </a>
+                      <i class="fa-sharp fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+                    </span>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
-            <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
           </div>
         </div>
 
         <div class="hidden md:flex gap-4 relative z-10 lg:p-10">
           <div class="flex gap-4">
-            <div
-              class="w-60 bg-white hover:shadow-lg transition-all duration-300 hover:scale-102 flex flex-col aspect-[5/4]"
+            <a
+              href="https://www.jellema-projecten.nl"
+              class="group bg-white flex flex-col transition-all duration-300 hover:shadow-lg hover:scale-102 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white w-60"
             >
-              <div
-                class="w-full aspect-square bg-gray-50 flex items-center justify-center"
-              >
-                <img
-                  src="/jellema-projecten-logo.svg"
-                  alt="Jellema Projecten"
-                  class="object-cover w-32"
-                />
+              <div class="w-full aspect-square bg-gray-50 flex items-center justify-center">
+                <img src="/jellema-projecten-logo.svg" alt="" class="object-cover w-32" />
               </div>
-              <div class="p-6 flex flex-col gap-2 justify-between h-full">
+              <div class="p-6 flex flex-col gap-2 justify-between grow">
                 <div class="flex flex-col gap-2">
-                  <h3 class="text-lg font-bold">Jellema Projecten B.V.</h3>
-                  <p class="text-sm text-gray-500">
-                    Jellema Projecten is de specialist voor totaalafbouw.
-                  </p>
+                  <h2 class="text-lg font-bold">Jellema Projecten B.V.</h2>
+                  <p class="text-sm text-gray-500">Jellema Projecten is de specialist voor totaalafbouw.</p>
                 </div>
-                <a
-                  href="https://www.jellema-projecten.nl"
-                  class="text-sm flex items-center gap-2"
-                >
+                <span class="text-sm font-semibold text-blue-800 flex items-center gap-2 group-hover:underline">
                   Bezoek website
-                  <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
-                </a>
+                  <i class="fa-sharp fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+                </span>
               </div>
-            </div>
-            <div
-              class="w-60 bg-white hover:shadow-lg transition-all duration-300 hover:scale-102 flex flex-col aspect-[5/4]"
+            </a>
+            <a
+              href="https://www.jellema-afbouw.nl"
+              class="group bg-white flex flex-col transition-all duration-300 hover:shadow-lg hover:scale-102 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white w-60"
             >
-              <div
-                class="w-full aspect-square bg-gray-50 flex items-center justify-center"
-              >
-                <img
-                  src="/jellema-afbouw-logo.svg"
-                  alt="Jellema Afbouw"
-                  class="object-cover w-32"
-                />
+              <div class="w-full aspect-square bg-gray-50 flex items-center justify-center">
+                <img src="/jellema-afbouw-logo.svg" alt="" class="object-cover w-32" />
               </div>
-              <div class="p-6 flex flex-col gap-2 justify-between h-full">
+              <div class="p-6 flex flex-col gap-2 justify-between grow">
                 <div class="flex flex-col gap-2">
-                  <h3 class="text-lg font-bold">Jellema Afbouw B.V.</h3>
-                  <p class="text-sm text-gray-500">
-                    Jellema Afbouw is de specialist voor het plaatsen van
-                    plafonds en wanden.
-                  </p>
+                  <h2 class="text-lg font-bold">Jellema Afbouw B.V.</h2>
+                  <p class="text-sm text-gray-500">Jellema Afbouw is de specialist voor het plaatsen van plafonds en wanden.</p>
                 </div>
-                <a
-                  href="https://www.jellema-afbouw.nl"
-                  class="text-sm flex items-center gap-2"
-                >
+                <span class="text-sm font-semibold text-blue-800 flex items-center gap-2 group-hover:underline">
                   Bezoek website
-                  <i class="fa-sharp fa-solid fa-arrow-right-long"></i>
-                </a>
+                  <i class="fa-sharp fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+                </span>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>

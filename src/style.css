@@ -34,6 +34,15 @@
   position: fixed;
   inset: 0;
   overflow: hidden;
+  /* Failsafe: hide the intro even if JavaScript never removes it. */
+  animation: loading-failsafe 0s 6s forwards;
+}
+
+@keyframes loading-failsafe {
+  to {
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .loading-screen {
