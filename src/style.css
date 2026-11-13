@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "proxima-nova", sans-serif;
+  --font-sans: "Figtree", sans-serif;
   
   --color-tory-blue-50: #edf9ff;
   --color-tory-blue-100: #d7efff;
