@@ -87,6 +87,7 @@ function initSwiper() {
     modules: [Pagination],
     slidesPerView: 'auto',
     spaceBetween: 16,
+    setWrapperSize: true,
     breakpoints: {
       640: {
         slidesPerView: 3,
